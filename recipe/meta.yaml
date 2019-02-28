@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.2" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 9a9c99c8a6c510d2f552a88744095ae31c67cb07f7b519d9ba6f6543f4584406
+  sha256: 0bb426d82695f19eeff6bc4865ba6387d12105332166b77aa4dcbe68a925876f
 
 build:
     number: 0
