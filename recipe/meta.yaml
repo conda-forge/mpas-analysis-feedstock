@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.2.2" %}
+{% set version = "1.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 138b9a9ebe744726e22350897ac0c52e7117f77d98fb65277418b9ac62ba7e46
+  sha256: a92fe368ff0031e5608479935a7dfa1a8b8f238c66402877de91b7c9d8b0f069
 
 build:
     number: 0
@@ -26,12 +26,12 @@ requirements:
     - python
     - numpy
     - scipy
-    - matplotlib <3.0.0|>=3.0.2
+    - matplotlib >=3.0.2
     - netcdf4
     - xarray >=0.10.0
     - dask
     - bottleneck
-    - basemap <1.2.0|>1.2.0
+    - basemap
     - lxml
     - nco >=4.7.9
     - pillow
