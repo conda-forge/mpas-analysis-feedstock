@@ -26,14 +26,14 @@ requirements:
     - python
     - numpy
     - scipy
-    - matplotlib <=2.2.3|>=3.0.2
+    - matplotlib >=3.0.2
     - netcdf4
     - xarray >=0.10.0
     - dask
     - bottleneck
     - basemap
     - lxml
-    - nco >=4.7.9
+    - nco >=4.8.1
     - pillow
     - cmocean
     - progressbar2
@@ -41,6 +41,8 @@ requirements:
     - pyproj
     - setuptools
     - shapely
+    - cartopy
+    - geometric_features
 
 test:
   requires:
