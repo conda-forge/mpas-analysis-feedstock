@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.2.3" %}
+{% set version = "1.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: a92fe368ff0031e5608479935a7dfa1a8b8f238c66402877de91b7c9d8b0f069
+  sha256: 3a02400997dc090201a3e297ef497d51efa37fd21bd5322cbe2db83235e91d9d
 
 build:
-    number: 1
+    number: 0
     script: "{{ PYTHON }} -m pip install . --no-deps -vv"
     noarch: python
     entry_points:
@@ -26,14 +26,14 @@ requirements:
     - python
     - numpy
     - scipy
-    - matplotlib <=2.2.3|>=3.0.2
+    - matplotlib >=3.0.2
     - netcdf4
     - xarray >=0.10.0
     - dask
     - bottleneck
     - basemap
     - lxml
-    - nco >=4.7.9
+    - nco >=4.8.1
     - pillow
     - cmocean
     - progressbar2
@@ -41,6 +41,8 @@ requirements:
     - pyproj
     - setuptools
     - shapely
+    - cartopy
+    - geometric_features
 
 test:
   requires:
