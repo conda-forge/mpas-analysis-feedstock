@@ -43,6 +43,7 @@ requirements:
     - shapely
     - cartopy
     - geometric_features
+    - gsw
 
 test:
   requires:
