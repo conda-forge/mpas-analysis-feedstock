@@ -17,7 +17,7 @@ build:
     entry_points:
         - mpas_analysis = mpas_analysis.__main__:main
         - download_analysis_data = mpas_analysis.download_data:download_analysis_data
-        - download_nautral_earth_110m = mpas_analysis.download_data:download_nautral_earth_110m
+        - download_natural_earth_110m = mpas_analysis.download_data:download_natural_earth_110m
 
 requirements:
   host:
@@ -56,7 +56,7 @@ test:
     - pytest --pyargs mpas_analysis
     - mpas_analysis --help
     - download_analysis_data --help
-    - download_nautral_earth_110m --help
+    - download_natural_earth_110m --help
 
 about:
   home: https://github.com/MPAS-Dev/MPAS-Analysis
