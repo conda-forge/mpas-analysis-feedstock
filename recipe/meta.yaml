@@ -11,12 +11,13 @@ source:
   sha256: 9f754e4512e6c534b917f25e62d2fa9a7ec731c6f722642291578cd8631234c8
 
 build:
-    number: 0
+    number: 1
     script: "{{ PYTHON }} -m pip install . --no-deps -vv"
     noarch: python
     entry_points:
         - mpas_analysis = mpas_analysis.__main__:main
-        - download_analysis_data = mpas_analysis.__main__:download_analysis_data
+        - download_analysis_data = mpas_analysis.download_data:download_analysis_data
+        - download_nautral_earth_110m = mpas_analysis.download_data:download_nautral_earth_110m
 
 requirements:
   host:
@@ -53,6 +54,9 @@ test:
     - pytest
   commands:
     - pytest --pyargs mpas_analysis
+    - mpas_analysis --help
+    - download_analysis_data --help
+    - download_nautral_earth_110m --help
 
 about:
   home: https://github.com/MPAS-Dev/MPAS-Analysis
