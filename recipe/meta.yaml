@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.2.5" %}
+{% set version = "1.2.6" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 9f754e4512e6c534b917f25e62d2fa9a7ec731c6f722642291578cd8631234c8
+  sha256: 9fce7561efa0d512567f89219a1f1642210810523a550b1974a17fdba1b6f544
 
 build:
-    number: 1
+    number: 0
     script: "{{ PYTHON }} -m pip install . --no-deps -vv"
     noarch: python
     entry_points:
@@ -45,6 +45,7 @@ requirements:
     - cartopy
     - geometric_features
     - gsw
+    - pyremap
 
 test:
   requires:
