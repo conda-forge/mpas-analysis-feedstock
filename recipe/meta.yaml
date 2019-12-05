@@ -69,7 +69,7 @@ about:
     Analysis for simulations produced with Model for Prediction Across Scales
     (MPAS) components and the Energy Exascale Earth System Model (E3SM), which
     used those components.
-  doc_url: http://mpas-analysis.readthedocs.io
+  doc_url: https://mpas-dev.github.io/MPAS-Analysis/stable/
   dev_url: https://github.com/MPAS-Dev/MPAS-Analysis
 
 extra:
