@@ -11,7 +11,7 @@ source:
   sha256: 9fce7561efa0d512567f89219a1f1642210810523a550b1974a17fdba1b6f544
 
 build:
-    number: 1
+    number: 2
     script: "{{ PYTHON }} -m pip install . --no-deps -vv"
     noarch: python
     entry_points:
@@ -45,7 +45,7 @@ requirements:
     - cartopy
     - geometric_features
     - gsw
-    - pyremap
+    - pyremap <0.1.0
 
 test:
   requires:
