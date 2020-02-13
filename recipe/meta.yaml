@@ -11,7 +11,7 @@ source:
   sha256: 9fce7561efa0d512567f89219a1f1642210810523a550b1974a17fdba1b6f544
 
 build:
-    number: 2
+    number: 3
     script: "{{ PYTHON }} -m pip install . --no-deps -vv"
     noarch: python
     entry_points:
@@ -27,7 +27,7 @@ requirements:
     - python
     - numpy
     - scipy
-    - matplotlib <3.0.0|>=3.0.2
+    - matplotlib-base <3.0.0|>=3.0.2
     - netcdf4
     - xarray >=0.10.0,<0.14.1
     - dask
