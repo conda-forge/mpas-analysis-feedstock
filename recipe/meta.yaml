@@ -63,7 +63,7 @@ test:
 
 about:
   home: https://github.com/MPAS-Dev/MPAS-Analysis
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: 'Analysis of MPAS-Ocean and MPAS-Seaice simulations results'
