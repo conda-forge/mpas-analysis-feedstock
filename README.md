@@ -5,7 +5,7 @@ Home: https://github.com/MPAS-Dev/MPAS-Analysis
 
 Package license: BSD 3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Analysis of MPAS-Ocean and MPAS-Seaice simulations results
 
