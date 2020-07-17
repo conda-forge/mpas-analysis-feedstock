@@ -9,9 +9,11 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
   sha256: bc9b8d54eb757a54200f01a6d1310a41b715adfcc8830f56c652d34120404648
+  patches:
+    - 0001-Fix-an-issue-with-argmin-with-newest-xarray.patch
 
 build:
-    number: 2
+    number: 3
     script: "{{ PYTHON }} -m pip install . --no-deps -vv"
     noarch: python
     entry_points:
@@ -28,7 +30,7 @@ requirements:
     - scipy
     - matplotlib-base >=3.0.2
     - netcdf4
-    - xarray >=0.14.1,<0.15.1
+    - xarray >=0.14.1
     - dask
     - bottleneck
     - lxml
