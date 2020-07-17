@@ -11,7 +11,7 @@ source:
   sha256: bc9b8d54eb757a54200f01a6d1310a41b715adfcc8830f56c652d34120404648
 
 build:
-    number: 1
+    number: 2
     script: "{{ PYTHON }} -m pip install . --no-deps -vv"
     noarch: python
     entry_points:
@@ -31,7 +31,6 @@ requirements:
     - xarray >=0.14.1,<0.15.1
     - dask
     - bottleneck
-    - basemap
     - lxml
     - nco >=4.8.1
     - pillow
