@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.2.7" %}
+{% set version = "1.2.8" %}
 
 package:
   name: {{ name|lower }}
@@ -8,13 +8,11 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: bc9b8d54eb757a54200f01a6d1310a41b715adfcc8830f56c652d34120404648
-  patches:
-    - 0001-Fix-an-issue-with-argmin-with-newest-xarray.patch
+  sha256: 068b48b7b77f6423868ba6176ed30ffda2fa353c64e89cbd6c342ff4e3055ee4
 
 build:
-    number: 3
-    script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+    number: 0
+    script: {{ PYTHON }} -m pip install . --no-deps -vv
     noarch: python
     entry_points:
         - mpas_analysis = mpas_analysis.__main__:main
@@ -47,7 +45,7 @@ requirements:
     - geometric_features >=0.1.9
     - gsw
     - pyremap <0.1.0
-    - mpas_tools >=0.0.8
+    - mpas_tools >=0.0.13
 
 test:
   requires:
@@ -65,7 +63,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Analysis of MPAS-Ocean and MPAS-Seaice simulations results'
+  summary: Analysis of MPAS-Ocean and MPAS-Seaice simulations results
   description: |
     Analysis for simulations produced with Model for Prediction Across Scales
     (MPAS) components and the Energy Exascale Earth System Model (E3SM), which
