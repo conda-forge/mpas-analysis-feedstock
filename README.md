@@ -5,9 +5,13 @@ Home: https://github.com/MPAS-Dev/MPAS-Analysis
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mpas-analysis-feedstock/blob/master/LICENSE.txt)
 
 Summary: Analysis of MPAS-Ocean and MPAS-Seaice simulations results
+
+Development: https://github.com/MPAS-Dev/MPAS-Analysis
+
+Documentation: https://mpas-dev.github.io/MPAS-Analysis/stable/
 
 Analysis for simulations produced with Model for Prediction Across Scales
 (MPAS) components and the Energy Exascale Earth System Model (E3SM), which
