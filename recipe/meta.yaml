@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.2.8" %}
+{% set version = "1.2.9" %}
 
 package:
   name: {{ name|lower }}
@@ -8,22 +8,22 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 068b48b7b77f6423868ba6176ed30ffda2fa353c64e89cbd6c342ff4e3055ee4
+  sha256: 5f10ff2e8c878d76c716baec6b9dc4e96716d3d7c8e72055f0bd544142e3fcd1
 
 build:
-    number: 0
-    script: {{ PYTHON }} -m pip install . --no-deps -vv
-    noarch: python
-    entry_points:
-        - mpas_analysis = mpas_analysis.__main__:main
-        - download_analysis_data = mpas_analysis.download_data:download_analysis_data
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  noarch: python
+  entry_points:
+    - mpas_analysis = mpas_analysis.__main__:main
+    - download_analysis_data = mpas_analysis.download_data:download_analysis_data
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - numpy
     - scipy
     - matplotlib-base >=3.0.2
@@ -42,10 +42,13 @@ requirements:
     - shapely
     - cartopy >=0.18.0
     - cartopy_offlinedata
-    - geometric_features >=0.1.9
+    - geometric_features >=0.1.12
     - gsw
     - pyremap <0.1.0
-    - mpas_tools >=0.0.13
+    - mpas_tools >=0.0.15
+    - pandas
+    - python-dateutil
+    - six
 
 test:
   requires:
