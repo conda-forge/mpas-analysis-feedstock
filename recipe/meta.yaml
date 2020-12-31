@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.2.9" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 5f10ff2e8c878d76c716baec6b9dc4e96716d3d7c8e72055f0bd544142e3fcd1
+  sha256: 02ac541d5593cbe0a8594f170bc401f23dc42d3685316907ddf661dea77943bd
 
 build:
   number: 0
@@ -42,7 +42,7 @@ requirements:
     - shapely
     - cartopy >=0.18.0
     - cartopy_offlinedata
-    - geometric_features >=0.1.12
+    - geometric_features >=0.1.13
     - gsw
     - pyremap <0.1.0
     - mpas_tools >=0.0.15
