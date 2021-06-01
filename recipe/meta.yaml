@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.4.0rc2" %}
+{% set version = "1.4.0rc3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: ea01ccf72b112c9b9b29f396b9e60d3542d8b8a7ef1114be0e0996dc04045db4
+  sha256: bb027094852872a3056394e1c0d8f72819e435e6049b738464050dcfb8b6d103
 
 build:
   number: 0
@@ -41,7 +41,7 @@ requirements:
     - pillow
     - progressbar2
     - pyproj
-    - pyremap >=0.0.12,<0.1.0
+    - pyremap >=0.0.13,<0.1.0
     - python-dateutil
     - requests
     - scipy
