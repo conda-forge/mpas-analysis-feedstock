@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 92161b48c7e16acbf9cc12ef7d20a401e463793de643a6c28e192f901f93798d
+  sha256: 514ea6de40e5043ff4cb92063e0247ef197f13f6309ff138dfcc5771780c6f73
 
 build:
   number: 1
@@ -32,6 +32,7 @@ requirements:
     - geometric_features >=0.5.0
     - gsw
     - lxml
+    - mache >=1.1.2
     - matplotlib-base >=3.0.2
     - mpas_tools >=0.5.1
     - nco >=4.8.1
