@@ -20,15 +20,16 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8,<3.12
     - pip
   run:
-    - python >=3.7
+    - python >=3.8,<3.12
     - bottleneck
     - cartopy >=0.18.0
     - cartopy_offlinedata
     - cmocean
     - dask
+    - esmf >=8.0.0,<8.3.0
     - f90nml
     - geometric_features >=0.5.0
     - gsw
