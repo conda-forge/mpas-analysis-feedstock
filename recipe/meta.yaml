@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.7.2" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 6d23d0ad34644bbae63051bdfee8b0743a507e93599e5d95d5be8926a42d316e
+  sha256: a616df23198bc733f0fba904e1f3c7aca7bba96da2e31b23ef3648e599d0ced0
 
 build:
   number: 0
@@ -20,15 +20,16 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8,<3.12
     - pip
   run:
-    - python >=3.7
+    - python >=3.8,<3.12
     - bottleneck
     - cartopy >=0.18.0
     - cartopy_offlinedata
     - cmocean
     - dask
+    - esmf >=8.0.0,<8.3.0
     - f90nml
     - geometric_features >=0.5.0
     - gsw
