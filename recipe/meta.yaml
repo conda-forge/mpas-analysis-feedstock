@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.8.0rc3" %}
+{% set version = "1.9.0rc1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: b73d8454b42da96245118169dbfe69e49d6467c8ce22e7c56df9c7e450a30096
+  sha256: e7d4ca3906d83f95f37f8116f1c0644076fb1a25a2440b544c8e70ab7d9704aa
 
 build:
   number: 0
@@ -31,12 +31,12 @@ requirements:
     - dask
     - esmf
     - f90nml
-    - geometric_features >=0.5.0
+    - geometric_features >=1.2.0
     - gsw
     - lxml
-    - mache >=1.1.2
-    - matplotlib-base >=3.0.2
-    - mpas_tools >=0.14.0
+    - mache >=1.11.0
+    - matplotlib-base >=3.6.0
+    - mpas_tools >=0.16.0
     - nco >=4.8.1
     - netcdf4
     - numpy
@@ -49,7 +49,7 @@ requirements:
     - requests
     - scipy
     - setuptools
-    - shapely
+    - shapely >=2.0,<3.0
     - xarray >=0.14.1
 
 test:

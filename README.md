@@ -1,11 +1,11 @@
-About mpas-analysis
-===================
+About mpas-analysis-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mpas-analysis-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/MPAS-Dev/MPAS-Analysis
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mpas-analysis-feedstock/blob/master/LICENSE.txt)
 
 Summary: Analysis of MPAS-Ocean and MPAS-Seaice simulations results
 
@@ -24,8 +24,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6243&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mpas-analysis-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6243&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mpas-analysis-feedstock?branchName=main">
       </a>
     </td>
   </tr>
