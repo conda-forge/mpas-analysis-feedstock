@@ -1,11 +1,11 @@
-About mpas-analysis
-===================
+About mpas-analysis-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mpas-analysis-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/MPAS-Dev/MPAS-Analysis
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mpas-analysis-feedstock/blob/main/LICENSE.txt)
 
 Summary: Analysis of MPAS-Ocean and MPAS-Seaice simulations results
 

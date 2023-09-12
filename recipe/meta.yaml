@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.8.0" %}
+{% set version = "1.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: a616df23198bc733f0fba904e1f3c7aca7bba96da2e31b23ef3648e599d0ced0
+  sha256: a2c077718603f469836c7f5906e0fe47b1b8550930b7c700ad5eb2b53e9deaf8
 
 build:
   number: 0
@@ -29,19 +29,19 @@ requirements:
     - cartopy_offlinedata
     - cmocean
     - dask
-    - esmf >=8.0.0,<8.3.0
+    - esmf >=8.4.2,<8.5.0
     - f90nml
-    - geometric_features >=0.5.0
+    - geometric_features >=1.2.0
     - gsw
     - lxml
-    - mache >=1.1.2
-    - matplotlib-base >=3.0.2
-    - mpas_tools >=0.14.0
+    - mache >=1.11.0
+    - matplotlib-base >=3.6.0,!=3.7.2
+    - mpas_tools >=0.16.0
     - nco >=4.8.1
     - netcdf4
     - numpy
     - pandas
-    - pillow
+    - pillow >=10.0.0,<11.0.0
     - progressbar2
     - pyproj
     - pyremap >=0.0.13,<0.1.0
@@ -49,7 +49,7 @@ requirements:
     - requests
     - scipy
     - setuptools
-    - shapely
+    - shapely >=2.0,<3.0
     - xarray >=0.14.1
 
 test:
