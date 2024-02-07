@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.9.1rc2" %}
+{% set version = "1.10.0rc1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 37641de4a5f2a2168fadf4a6eb2041842a9439ba0b0d694bdfd47ece6970b7df
+  sha256: 3d01fafb70bc7419a7f4ab4c0174111a9ba348c3b99bd0e5f02b580e91a694d0
 
 build:
   number: 0
@@ -36,7 +36,7 @@ requirements:
     - lxml
     - mache >=1.11.0
     - matplotlib-base >=3.6.0,!=3.7.2
-    - mpas_tools >=0.16.0
+    - mpas_tools >=0.30.0
     - nco >=4.8.1
     - netcdf4
     - numpy
@@ -44,7 +44,7 @@ requirements:
     - pillow >=10.0.0,<11.0.0
     - progressbar2
     - pyproj
-    - pyremap >=0.0.14,<0.1.0
+    - pyremap >=1.2.0,<2.0.0
     - python-dateutil
     - requests
     - scipy
