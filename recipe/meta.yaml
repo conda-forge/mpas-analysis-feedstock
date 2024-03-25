@@ -11,7 +11,7 @@ source:
   sha256: d750bcf77f9bdf801acc5a77df3f0611189f967a402b6119b5368e66ddc31c09
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
   entry_points:
@@ -29,7 +29,7 @@ requirements:
     - cartopy_offlinedata
     - cmocean
     - dask
-    - esmf >=8.4.2,<8.5.0
+    - esmf >=8.4.2,<8.7.0
     - f90nml
     - geometric_features >=1.2.0
     - gsw
