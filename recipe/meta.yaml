@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.11.0" %}
+{% set version = "1.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 85023957f10a2669776aaaac3d78e2540fb2f2c3b824a53cbcf9130197c7deeb
+  sha256: b579679481a37801bdb5a56a066f2d88c59ea72dd0a38f6cfd8c7b0e83f159bb
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
   noarch: python
   entry_points:
     - mpas_analysis = mpas_analysis.__main__:main
@@ -20,26 +20,26 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.12
+    - python >=3.8,<3.13
     - pip
+    - setuptools
   run:
-    - python >=3.8,<3.12
-    - bottleneck
+    - python >=3.8,<3.13
     - cartopy >=0.18.0
     - cartopy_offlinedata
     - cmocean
     - dask
     - esmf >=8.4.2,<8.7.0
     - f90nml
-    - geometric_features >=1.2.0
+    - geometric_features >=1.4.0
     - gsw
     - lxml
     - mache >=1.11.0
-    - matplotlib-base >=3.6.0,!=3.7.2
-    - mpas_tools >=0.30.0
-    - nco >=4.8.1
+    - matplotlib-base >=3.9.0
+    - mpas_tools >=0.34.0
+    - nco >=4.8.1,!=5.2.6
     - netcdf4
-    - numpy
+    - numpy >=2.0,<3.0
     - pandas
     - pillow >=10.0.0,<11.0.0
     - progressbar2
