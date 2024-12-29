@@ -11,7 +11,7 @@ source:
   sha256: b579679481a37801bdb5a56a066f2d88c59ea72dd0a38f6cfd8c7b0e83f159bb
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
   noarch: python
   entry_points:
@@ -20,11 +20,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.13
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.8,<3.13
+    - python >={{ python_min }},<3.13
     - cartopy >=0.18.0
     - cartopy_offlinedata
     - cmocean
@@ -56,6 +56,7 @@ test:
   requires:
     - pytest
     - pip
+    - python {{ python_min }}
   imports:
     - mpas_analysis
     - pytest
