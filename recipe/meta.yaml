@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.12.0rc1" %}
+{% set version = "1.13.0rc1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,31 +8,27 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 42197b5b13e73933a433f527506ccb097ef8afc6e4d5ad49ea2463f8abf7c8a7
+  sha256: 8b47a99c1e1cc82ccb3251ce66b69a27ca8cbc5cafa3cabc3aa8f6b85afd0c21
 
 build:
   number: 0
   script: {{ PYTHON }} -m pip install --no-deps --no-build-isolation -vv .
   noarch: python
-  entry_points:
-    - mpas_analysis = mpas_analysis.__main__:main
-    - download_analysis_data = mpas_analysis.download_data:download_analysis_data
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.9
-    - bottleneck
+    - python >={{ python_min }}
     - cartopy >=0.18.0
     - cartopy_offlinedata
     - cmocean
     - dask
     - esmf >=8.4.2,<8.7.0
     - f90nml
-    - geometric_features >=1.4.0
+    - geometric_features >=1.6.1
     - gsw
     - lxml
     - mache >=1.11.0
@@ -55,6 +51,7 @@ requirements:
 
 test:
   requires:
+    - python {{ python_min }}
     - pytest
     - pip
   imports:
