@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.13.0rc9" %}
+{% set version = "1.13.0rc10" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 2424f86dcc4e194f9c07b1b88626afeaed210bb1a980a661b7c92b0ede71896c
+  sha256: 16e396781774dde9ffaf0b5b336c09a3d36adea9f20963b81b549b9fcb1b3893
 
 build:
   number: 0
@@ -61,6 +61,8 @@ test:
     - pip check
     - pytest --pyargs mpas_analysis
     - mpas_analysis --help
+    - mpas_analysis --list
+    - mpas_analysis --plot_colormaps
     - download_analysis_data --help
 
 about:
