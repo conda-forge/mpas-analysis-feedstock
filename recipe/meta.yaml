@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.12.0" %}
+{% set version = "1.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: b579679481a37801bdb5a56a066f2d88c59ea72dd0a38f6cfd8c7b0e83f159bb
+  sha256: b18f8586015c7bc180e4de8357191d4fa6e9de2be6570944025f44b7aacddd1f
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
   noarch: python
   entry_points:
@@ -29,14 +29,14 @@ requirements:
     - cartopy_offlinedata
     - cmocean
     - dask
-    - esmf >=8.4.2,<8.7.0
+    - esmf >=8.4.2,<9.0.0
     - f90nml
-    - geometric_features >=1.4.0
+    - geometric_features >=1.6.1
     - gsw
     - lxml
     - mache >=1.11.0
     - matplotlib-base >=3.9.0
-    - mpas_tools >=0.34.0
+    - mpas_tools >=0.34.1,<1.0.0
     - nco >=4.8.1,!=5.2.6
     - netcdf4
     - numpy >=2.0,<3.0
@@ -64,6 +64,8 @@ test:
     - pip check
     - pytest --pyargs mpas_analysis
     - mpas_analysis --help
+    - mpas_analysis --list
+    - mpas_analysis --plot_colormaps
     - download_analysis_data --help
 
 about:
