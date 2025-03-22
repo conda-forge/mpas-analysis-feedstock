@@ -29,14 +29,14 @@ requirements:
     - cartopy_offlinedata
     - cmocean
     - dask
-    - esmf >=8.4.2,<8.7.0
+    - esmf >=8.4.2,<9.0.0
     - f90nml
-    - geometric_features >=1.4.0
+    - geometric_features >=1.6.1
     - gsw
     - lxml
     - mache >=1.11.0
     - matplotlib-base >=3.9.0
-    - mpas_tools >=0.34.0
+    - mpas_tools >=0.34.1,<1.0.0
     - nco >=4.8.1,!=5.2.6
     - netcdf4
     - numpy >=2.0,<3.0
@@ -64,6 +64,8 @@ test:
     - pip check
     - pytest --pyargs mpas_analysis
     - mpas_analysis --help
+    - mpas_analysis --list
+    - mpas_analysis --plot_colormaps
     - download_analysis_data --help
 
 about:
