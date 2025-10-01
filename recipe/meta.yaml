@@ -1,5 +1,5 @@
 {% set name = "MPAS-Analysis" %}
-{% set version = "1.14.0rc01" %}
+{% set version = "1.14.0rc2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/MPAS-Dev/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 0bd6f1608124032b90bff4937c02aa2dbb85da62950eeb70e9e160c12fa13bb9
+  sha256: 7545e64ceebdae78476ae91cc30b437680684f9c0731d4c9670e278a17a947ec
 
 build:
   number: 0
@@ -19,7 +19,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - setuptools >=60
   run:
     - python >={{ python_min }}
     - cartopy >=0.18.0
@@ -33,7 +33,7 @@ requirements:
     - lxml
     - mache >=1.11.0
     - matplotlib-base >=3.9.0
-    - mpas_tools >=1.2.2,<2.0.0
+    - mpas_tools >=1.3.0,<2.0.0
     - nco >=4.8.1,!=5.2.6
     - netcdf4
     - numpy >=2.0,<3.0
@@ -47,6 +47,7 @@ requirements:
     - scipy >=1.7.0
     - setuptools
     - shapely >=2.0,<3.0
+    - tranche >=0.2.3
     - xarray >=0.14.1
 
 test:
