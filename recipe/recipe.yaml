@@ -60,7 +60,6 @@ tests:
   - python:
       imports:
         - mpas_analysis
-        - pytest
       pip_check: true
       python_version: ${{ python_min }}.*
   - requirements:
