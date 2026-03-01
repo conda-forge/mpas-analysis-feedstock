@@ -17,7 +17,6 @@ Analysis for simulations produced with Model for Prediction Across Scales
 (MPAS) components and the Energy Exascale Earth System Model (E3SM), which
 used those components.
 
-
 Current build status
 ====================
 
