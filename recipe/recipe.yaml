@@ -62,14 +62,13 @@ tests:
       imports:
         - mpas_analysis
         - pytest
+      pip_check: true
       python_version: ${{ python_min }}.*
   - requirements:
       run:
         - pytest
-        - pip
         - python ${{ python_min }}.*
     script:
-      - pip check
       - pytest --pyargs mpas_analysis
       - mpas_analysis --help
       - mpas_analysis --list
