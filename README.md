@@ -17,7 +17,6 @@ Analysis for simulations produced with Model for Prediction Across Scales
 (MPAS) components and the Energy Exascale Earth System Model (E3SM), which
 used those components.
 
-
 Current build status
 ====================
 
@@ -41,14 +40,14 @@ Current release info
 Installing mpas-analysis
 ========================
 
-Installing `mpas-analysis` from the `conda-forge/label/mpas_analysis_dev` channel can be achieved by adding `conda-forge/label/mpas_analysis_dev` to your channels with:
+Installing `mpas-analysis` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
-conda config --add channels conda-forge/label/mpas_analysis_dev
+conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge/label/mpas_analysis_dev` channel has been enabled, `mpas-analysis` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `mpas-analysis` can be installed with `conda`:
 
 ```
 conda install mpas-analysis
@@ -63,26 +62,26 @@ mamba install mpas-analysis
 It is possible to list all of the versions of `mpas-analysis` available on your platform with `conda`:
 
 ```
-conda search mpas-analysis --channel conda-forge/label/mpas_analysis_dev
+conda search mpas-analysis --channel conda-forge
 ```
 
 or with `mamba`:
 
 ```
-mamba search mpas-analysis --channel conda-forge/label/mpas_analysis_dev
+mamba search mpas-analysis --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search mpas-analysis --channel conda-forge/label/mpas_analysis_dev
+mamba repoquery search mpas-analysis --channel conda-forge
 
 # List packages depending on `mpas-analysis`:
-mamba repoquery whoneeds mpas-analysis --channel conda-forge/label/mpas_analysis_dev
+mamba repoquery whoneeds mpas-analysis --channel conda-forge
 
 # List dependencies of `mpas-analysis`:
-mamba repoquery depends mpas-analysis --channel conda-forge/label/mpas_analysis_dev
+mamba repoquery depends mpas-analysis --channel conda-forge
 ```
 
 
@@ -152,6 +151,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@andrewdnolan](https://github.com/andrewdnolan/)
 * [@jhkennedy](https://github.com/jhkennedy/)
 * [@xylar](https://github.com/xylar/)
 
