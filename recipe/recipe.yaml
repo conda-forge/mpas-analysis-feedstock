@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: MPAS-Analysis
-  version: 1.15.0rc2
+  version: 1.15.0rc3
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/MPAS-Dev/${{ name }}/archive/${{ version }}.tar.gz
-  sha256: ba9c3e0507e628511cd3a12f4dc61a18a2249113ae91544d0f01ee5d70d6687e
+  sha256: 0395acac107206897a20afd0f7b1119f31d6ce43ffe01614af824f452ff40e79
 
 build:
   number: 0
