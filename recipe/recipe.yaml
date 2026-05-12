@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: MPAS-Analysis
-  version: 1.14.0
+  version: 1.15.0
 
 package:
   name: ${{ name|lower }}
@@ -13,7 +13,7 @@ source:
   sha256: f27ba28a4eab0911061e3c45c3b8ef37703ff325b302b8babfeaece94171f073
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
   python:
@@ -40,11 +40,11 @@ requirements:
     - mache >=1.11.0
     - matplotlib-base >=3.9.0
     - mpas_tools >=1.3.0,<2.0.0
-    - nco >=4.8.1,!=5.2.6
+    - nco >=4.8.1,!=5.2.6,!=5.3.7
     - netcdf4
     - numpy >=2.0,<3.0
     - pandas
-    - pillow >=10.0.0,<11.0.0
+    - pillow >=10.0.0,<13.0.0
     - progressbar2
     - pyproj
     - pyremap >=2.0.0,<3.0.0
