@@ -2,7 +2,8 @@ schema_version: 1
 
 context:
   name: MPAS-Analysis
-  version: 1.15.0rc3
+  version: 1.16.0rc1
+  python_min: "3.11"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +11,7 @@ package:
 
 source:
   url: https://github.com/MPAS-Dev/${{ name }}/archive/${{ version }}.tar.gz
-  sha256: 0395acac107206897a20afd0f7b1119f31d6ce43ffe01614af824f452ff40e79
+  sha256: 393b560e3d7271da9b8787e82e41d436f21af699161f6333c5aab26d39597496
 
 build:
   number: 0
@@ -39,7 +40,7 @@ requirements:
     - lxml
     - mache >=1.11.0
     - matplotlib-base >=3.9.0
-    - mpas_tools >=1.3.0,<2.0.0
+    - mpas_tools >=2.0.0,<3.0.0
     - nco >=4.8.1,!=5.2.6,!=5.3.7
     - netcdf4
     - numpy >=2.0,<3.0
