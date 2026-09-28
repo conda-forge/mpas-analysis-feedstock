@@ -24,7 +24,9 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://github.com/conda-forge/mpas-analysis-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/mpas-analysis-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
     </td>
   </tr>
 </table>
@@ -46,31 +48,73 @@ conda config --add channels conda-forge/label/mpas_analysis_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge/label/mpas_analysis_dev` channel has been enabled, `mpas-analysis` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install mpas-analysis
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install mpas-analysis
 ```
 
-It is possible to list all of the versions of `mpas-analysis` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add mpas-analysis
+# for installing globally
+pixi global install mpas-analysis
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `mpas-analysis` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search mpas-analysis --channel conda-forge/label/mpas_analysis_dev
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search mpas-analysis --channel conda-forge/label/mpas_analysis_dev
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search mpas-analysis --channel conda-forge/label/mpas_analysis_dev
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -82,6 +126,8 @@ mamba repoquery whoneeds mpas-analysis --channel conda-forge/label/mpas_analysis
 # List dependencies of `mpas-analysis`:
 mamba repoquery depends mpas-analysis --channel conda-forge/label/mpas_analysis_dev
 ```
+
+</details>
 
 
 About conda-forge
